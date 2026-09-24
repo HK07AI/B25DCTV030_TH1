@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hưng - Portfolio Giới Thiệu Bản Thân</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Menu -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Hưng<span>.dev</span></a>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                    <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                    <li><a href="#projects" class="nav-link">Dự án</a></li>
+                    <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <!-- Tính năng 3: Dark/Light Mode -->
+                <button id="theme-toggle" aria-label="Chuyển đổi giao diện">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <!-- Tính năng 1: Menu Hamburger cho Mobile -->
+                <button id="hamburger" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Phần Giới Thiệu -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-text scroll-reveal">
+                <span class="badge">Xin chào, tôi là</span>
+                <h1>Kiều Việt Hưng</h1>
+                <h2>Sinh viên trí tuệ nhân tạo vạn vật tại PTIT</h2>
+                <p>Đam mê phát triển phần mềm, trí tuệ nhân tạo và xây dựng các ứng dụng web tương tác mượt mà, tối ưu trải nghiệm người dùng.</p>
+                <div class="about-buttons">
+                    <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+                    <a href="#contact" class="btn btn-outline">Liên Hệ Ngay</a>
+                </div>
+            </div>
+            <div class="about-img scroll-reveal">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Avatar Portfolio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Danh Sách Kỹ Năng -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <div class="section-title scroll-reveal">
+                <h2>Kỹ Năng Chuyên Môn</h2>
+                <p>Các công nghệ và công cụ tôi sử dụng trong lập trình</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card scroll-reveal">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML5 / CSS3</h3>
+                    <p>lập trình cơ bản html</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <i class="fa-brands fa-js"></i>
+                    <h3>JavaScript (ES6+)</h3>
+                    <p>lập trình cơ bản javascipt</p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python & AI</h3>
+                    <p>lập trình cơ bản python, dùng thành thạo các công cụ AI </p>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Các kĩ năng làm việc nhóm</h3>
+                    <p>khả năng thuyết trình, đọc tài liệu thành thạo, quản lí phân chia công việc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Danh Sách Dự Án (>= 3 dự án) có tính năng lọc/tìm kiếm dự án -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title scroll-reveal">
+                <h2>Dự Án Tiêu Biểu</h2>
+                <p>Các sản phẩm và bài tập thực hành đã thực hiện</p>
+            </div>
+            
+            <!-- Tính năng 6: Lọc/tìm kiếm dự án theo từ khóa hoặc tag -->
+            <div class="project-controls scroll-reveal">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="project-search" placeholder="Tìm kiếm dự án theo tên hoặc công nghệ...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tất cả</button>
+                    <button class="filter-btn" data-filter="web">Web Frontend</button>
+                    <button class="filter-btn" data-filter="ai">AI & Python</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                <!-- Dự án 1 -->
+                <div class="project-card scroll-reveal" data-category="web" data-tags="html css js">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Dự án 1">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Web Frontend</span>
+                        <h3>Trang Web Giới Thiệu Cá Nhân</h3>
+                        <p>Trang portfolio cá nhân đầy đủ tính năng responsive, dark mode, animation mượt mà.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dự án 2 -->
+                <div class="project-card scroll-reveal" data-category="ai" data-tags="python ai chatbot">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Dự án 2">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">AI & Python</span>
+                        <h3>PoseAlert — Hệ thống Nhận diện và Cảnh báo Tư thế AI</h3>
+                        <p>Trợ lý ảo AI ứng dụng Hệ thống Cảnh báo Thông minh: Tự động phát âm thanh chuông và hiển thị popup nếu giữ tư thế sai</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>LangChain</span><span>Gemini API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dự án 3 -->
+                <div class="project-card scroll-reveal" data-category="web" data-tags="html css js dashboard">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Dự án 3">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Web Frontend</span>
+                        <h3>Hệ Thống Quản Lý Điểm Sinh Viên</h3>
+                        <p>Giao diện dashboard thống kê điểm số, tính GPA tự động cho sinh viên công nghệ thông tin.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="no-project-found" class="hidden">Không tìm thấy dự án phù hợp.</div>
+        </div>
+    </section>
+
+    <!-- Form Liên Hệ -->
+    <section id="contact" class="section bg-light">
+        <div class="container contact-container">
+            <div class="section-title scroll-reveal">
+                <h2>Liên Hệ Với Tôi</h2>
+                <p>Hãy để lại lời nhắn, tôi sẽ phản hồi sớm nhất có thể!</p>
+            </div>
+            <!-- Tính năng 2: Validate form (kiểm tra nhiều điều kiện) + Tính năng 5: Đếm ký tự -->
+            <form id="contact-form" class="scroll-reveal" novalidate>
+                <div class="form-group">
+                    <label for="name">Họ và tên *</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn...">
+                    <small class="error-message" id="name-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                    <small class="error-message" id="email-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Lời nhắn * (Tối thiểu 10 ký tự)</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung lời nhắn..."></textarea>
+                    <div class="textarea-footer">
+                        <small class="error-message" id="message-error"></small>
+                        <!-- Tính năng 5: Đếm ký tự -->
+                        <span id="char-count">0/500 ký tự</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Gửi Lời Nhắn</button>
+                <div id="form-success" class="success-message hidden">Gửi thông tin thành công! Cảm ơn bạn đã liên hệ.</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year">2026</span> Kiều Việt Hưng. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
